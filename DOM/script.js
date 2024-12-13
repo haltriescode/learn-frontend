@@ -1,6 +1,7 @@
 // Selecting Elements
 // By ID
 const selectId = document.getElementById('button-1');
+const colorButton = document.getElementById('button-2');
 
 // By Class
 const selectClass = document.getElementsByClassName('paragraph');
@@ -20,27 +21,27 @@ function newContent(){
     
 };
 
-// setAttribute
-selectId.setAttribute('onclick', 'newContent()');
-
-// style
+// changeStyle
 function changeStyle(){
     selectTag[0].style.backgroundColor = 'black';
     selectTag[0].style.color = 'white';
 }
 
+// setAttribute
+selectId.setAttribute('onclick', 'newContent()');
+colorButton.setAttribute('onclick', 'changeStyle()');
+
+
 // Creating Elements
+// createElement
 const newElement = document.createElement('p');
 newElement.textContent = "This is a new paragraph";
-
-const colorButton = document.createElement('button');
-colorButton.textContent = "Change Color";
-colorButton.setAttribute('onclick', 'changeStyle()'); // setAttribute
 
 const removeButton = document.createElement('button');
 removeButton.textContent = "Remove Element";
 
 // Appending Elements
+// appendChild
 selectTag[0].appendChild(colorButton);
 selectTag[0].appendChild(newElement);
 selectTag[0].appendChild(removeButton);
